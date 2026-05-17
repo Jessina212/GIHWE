@@ -1,0 +1,149 @@
+/* Use of ChatGPT for learning and improving some parts of styles.css was done. */
+body {
+    background-color: #eef7f2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: white;
+    width: 320px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.time {
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.card h1 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.logout {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.greeting {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #2f5d4a;
+}
+
+/* ===== Flashcard Overlay ===== */
+#flashcard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* so that it is on top of everything, not behind */
+}
+
+.flashcard-hidden {
+    display: none; /* hiding initially */
+}
+
+/* Flashcard rectangle */
+.flashcard-content {
+    background: linear-gradient(135deg, #06402b, #39ff14);  /* to mix 2 colours */
+    width: 400px;
+    max-width: 90vw;
+    height: 600px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* center-aligning everything */
+
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Flashcard text wrapper */
+.flashcard-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flashcard task text */
+.flashcard-text .task {
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Close button at bottom center */
+.close-btn {
+    padding: 12px 28px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #45a049; /* color change upon hovering on the button */
+}
+
+
+

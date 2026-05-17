@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+
+{% block main %}
+    <div class="page">
+
+        <h1 class="greeting">Hello {{ name }} 👋! Hope you are having a Good Day!!</h1>
+        <div class="card-wrapper">
+            <div class="card outer-card">
+
+                <div class="card inner-card">
+                    <h2>Thought For Today</h2>
+                    <p class="quote">{{ quote }}</p>
+
+                    <form method="POST">
+                        <input type="number" name="time" placeholder="Please enter free time (in mins)" min="1" max="120" id = "time" required>
+                        <button type="submit">Get eco task</button>
+                    </form>
+
+                    {% if task %}
+                        <div id="flashcard">
+                            <div class="flashcard-content">
+
+                                <div class="flashcard-text">
+                                    <h3>One small thing you can do 🌿</h3>
+                                    <p class="task">{{ task }}</p>
+                                </div>
+                                <div class="flashcard-footer">
+                                    <button class="close-btn" id="close">Close</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <script>
+                            const flashcard = document.getElementById("flashcard")
+                            const close = document.getElementById("close")
+
+                            if (close && flashcard) {
+                                close.addEventListener("click", function() {
+                                    flashcard.style.display = "none";
+                                });
+
+                                flashcard.addEventListener("click", function(e) {
+                                    if (e.target == flashcard) {
+                                        flashcard.style.display = "none";
+                                    }
+                                });
+                            }
+                        </script>
+
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+        <a href="/logout" method="GET" class="logout">Logout</a>
+    </div>
+
+
+{% endblock %}
+

@@ -1,0 +1,3 @@
+zsh: permission denied: .venv/
+zsh: no such file or directory: __pycache__/
+zsh: no matches found: *.pyc
