@@ -1,4 +1,4 @@
-# GIMHE: Green Integration Of Mankind With Environment
+# GIHWE: Green Integration Of Humanity With Environment
 #### Video Demo:  <https://youtu.be/hxeyt2TIE0o>
 #### Description:
 
